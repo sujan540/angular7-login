@@ -1,9 +1,6 @@
-// @ts-ignore
-import {HTTP_INTERCEPTORS} from "@angular/common/http";
-import {JwtInterceptor} from "./jwt.interceptor";
-import {ErrorInterceptor} from "./error.interceptor";
-// used to create fake backend
-// @ts-ignore
+import {HTTP_INTERCEPTORS} from '@angular/common/http';
+import {JwtInterceptor} from './jwt.interceptor';
+import {ErrorInterceptor} from './error.interceptor';
 import { fakeBackendProvider } from './fakebackend.interceptor';
 
 export * from './auth.guard';
