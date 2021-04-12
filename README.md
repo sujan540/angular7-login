@@ -1,4 +1,4 @@
-# Angular7
+# angular-login
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.10.
 
@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Docker build
+`ng build --prod`
+`docker build -t angular-login-image .`
+`docker image ls`
+`docker run --name angular-login-app-container -d -p 8001:80 angular-login-image`
+
+`FROM nginx:1.17.1-alpine`
+`COPY nginx.conf /etc/nginx/nginx.conf`
+`COPY /dist/aston-villa-app /usr/share/nginx/html`
+This simple Dockerfile will tell Docker to do three things:
+first to get a nginx Docker image from Docker Hub tagged with 1.17.1-alpine (it’s like a version number),
+then copy-paste the default nginx configuration,
+and finally copy-paste the compiled application (we done it in previous step) to the container.

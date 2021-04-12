@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular7": {
+    "angular-login": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular7",
+            "outputPath": "dist/angular-login",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular7:build"
+            "browserTarget": "angular-login:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular7:build:production"
+              "browserTarget": "angular-login:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular7:build"
+            "browserTarget": "angular-login:build"
           }
         },
         "test": {
@@ -112,7 +112,7 @@
         }
       }
     },
-    "angular7-e2e": {
+    "angular-login-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -121,11 +121,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular7:serve"
+            "devServerTarget": "angular-login:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular7:serve:production"
+              "devServerTarget": "angular-login:serve:production"
             }
           }
         },
@@ -141,5 +141,5 @@
       }
     }
   },
-  "defaultProject": "angular7"
+  "defaultProject": "angular-login"
 }
