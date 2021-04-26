@@ -1,6 +1,6 @@
 {
   "/users/*": {
-    "target": "http://localhost:8080",
+    "target": "http://172.17.0.1:8081",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true
